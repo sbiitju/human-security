@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainTask">
+
+
+    <AutoCompleteTextView
+        android:id="@+id/search"
+        android:layout_width="195dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:hint="Search Here"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/searchBtn"
+        app:layout_constraintEnd_toStartOf="@+id/searchBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <ImageButton
+        android:id="@+id/searchBtn"
+        android:layout_width="77dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginRight="5dp"
+        android:onClick="Search"
+        android:src="@drawable/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search"
+        app:layout_constraintTop_toTopOf="@id/search" />
+
+    <TextView
+        android:id="@+id/safe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Safe Mode Active"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/searchBtn"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@id/search"
+        app:layout_constraintTop_toBottomOf="@id/search" />
+
+    <ImageButton
+        android:id="@+id/danger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:onClick="Danger"
+        android:src="@drawable/question"
+        app:layout_constraintEnd_toEndOf="@id/safe"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@id/safe"
+        app:layout_constraintTop_toBottomOf="@id/safe" />
+
+    <TextView
+        android:id="@+id/dangerTxt"
+        android:layout_width="196dp"
+        android:layout_height="26dp"
+        android:gravity="center"
+        android:text="Danger"
+        android:textColor="#F30E0E"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/danger"
+        app:layout_constraintStart_toStartOf="@id/danger"
+        app:layout_constraintTop_toBottomOf="@id/danger" />
+
+    <ImageButton
+        android:id="@+id/danger2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:onClick="Safe"
+        android:src="@drawable/shield"
+        app:layout_constraintStart_toStartOf="@+id/danger"
+        app:layout_constraintTop_toBottomOf="@id/dangerTxt"
+        app:layout_constraintEnd_toEndOf="@id/danger"/>
+
+    <TextView
+        android:id="@+id/safeTxt"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Safe"
+        android:textColor="#00C853"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/danger2"
+        app:layout_constraintStart_toStartOf="@id/danger2"
+        app:layout_constraintTop_toBottomOf="@id/danger2" />
+
+    <ImageButton
+        android:id="@+id/police"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@null"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:onClick="Police"
+        android:src="@drawable/policetest"
+        android:text="Police"
+        android:textColor="#06DE0F"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/atm"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/safeTxt" />
+
+    <ImageButton
+        android:id="@+id/atm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@null"
+        android:onClick="ATM"
+        android:src="@drawable/atm"
+        android:text="ATM"
+        android:textColor="#06DE0F"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/hospital"
+        app:layout_constraintStart_toEndOf="@id/police"
+        app:layout_constraintTop_toTopOf="@id/police" />
+
+
+    <ImageButton
+        android:id="@+id/hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="2dp"
+        android:background="@null"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:onClick="Hospital"
+        android:src="@drawable/patient"
+        android:text="Hospital"
+        android:textColor="#06DE0F"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/atm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/atm"
+        app:layout_constraintTop_toTopOf="@id/atm"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/rab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="44dp"
+        android:background="@null"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:onClick="RAB"
+        android:src="@drawable/policeman"
+        android:text="RAB"
+        android:textColor="#06DE0F"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/police"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/police"
+        app:layout_constraintTop_toBottomOf="@id/police" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="44dp"
+        android:background="@null"
+        android:onClick="Messenger"
+        android:src="@drawable/messenger"
+        app:layout_constraintEnd_toEndOf="@id/atm"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/atm"
+        app:layout_constraintTop_toBottomOf="@id/atm" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="44dp"
+        android:background="@null"
+        android:onClick="Dial"
+        android:src="@drawable/ic_dialer_sip_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/hospital"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/hospital"
+        app:layout_constraintTop_toBottomOf="@id/hospital" />
+</androidx.constraintlayout.widget.ConstraintLayout>
